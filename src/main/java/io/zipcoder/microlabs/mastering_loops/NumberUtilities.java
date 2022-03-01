@@ -2,72 +2,71 @@ package io.zipcoder.microlabs.mastering_loops;
 
 
 public class NumberUtilities {
-    static double output;
 
     public static String getEvenNumbers(int start, int stop) {
-       String output = "";
-        for (int i = start; i < stop; i++) {
-             if (i % 2 == 0) {
-                output += i; //This is the same as output = output + i
-             }
+        String newStringToHoldEvenNumbers = "";
+        for (int i = start; i < stop; i++) { //A for loop is needed to produce a range of numbers
+            if (i % 2 == 0) {
+                newStringToHoldEvenNumbers += i;
+            }
         }
-        return output;
+        return newStringToHoldEvenNumbers;
     }
-
 
 
     public static String getOddNumbers(int start, int stop) {
-        String output = "";
-        for (int i = start; i < stop; i++) {
-            if (i % 2 == 1) {
-                output += i; //This is the same as output = output + i
+        String newStringToHoldOddNumbers = "";
+        for (int i = start; i < stop; i++) { //A for loop is needed to produce a range of numbers
+            if (i % 2 != 0) {  // ! denotes not equal to, alternative could be i % 2 == 1;
+                newStringToHoldOddNumbers += i;
             }
         }
-        return output;
+        return newStringToHoldOddNumbers;
+
     }
 
 
-    public static String getSquareNumbers(int start, int stop, int step) {
-        String output = "";
-        for (int i = start; i < stop; i += step) {
-           output += (int) Math.pow(i,2);
+    public static String getSquareNumbers(int start, int stop, int step) { // step refers to increments of a specified amount, step here is replacing the incrementer i++
+        String newStringToHoldSquareNumbers = "";
+        for (int i = start; i < stop; i += step) { //A for loop is needed to produce a range of numbers
+            newStringToHoldSquareNumbers += (int) Math.pow(i, 2);  // By adding (int), this allows me to "cast" the double output from Math.pow to an int value, which is needed because of my parameters
         }
-        return output;
+        return newStringToHoldSquareNumbers;
     }
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        String output = "";
-        for (int i = start; i < stop; i += step) {
-            output += (int) Math.pow(i,exponent);
+        String newStringToHoldExponentsNumbers = "";
+        for (int i = start; i < stop; i += step) { //A for loop is needed to produce a range of numbers
+            newStringToHoldExponentsNumbers += (int) Math.pow(i, exponent);  // By adding (int), this allows me to "cast" the double output from Math.pow to an int value, which is needed because of my parameters
         }
-        return output;
+        return newStringToHoldExponentsNumbers;
     }
 
     public static String getRange(int stop) {
-        String output = "";
-        for (int i = 0; i < stop; i++) {
-            output += i;
+        String newRange = "";
+        for (int i = 0; i < stop; i++) { //A for loop is needed to produce a range of numbers
+            newRange += i;
         }
-        return output;
+        return newRange;
+
     }
 
     public static String getRange(int start, int stop) {
-        String output = "";
+        String rangeString = "";
         for (int i = start; i < stop; i++) {
-            output += i;
+            rangeString += i;
         }
-        return output;
+        return rangeString;
+
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        String output = "";
+        String rangeString = "";
         for (int i = start; i < stop; i += step) {
-            output += i;
+            rangeString += i;
         }
-        return output;
+        return rangeString;
+
     }
-
-
-
 }
